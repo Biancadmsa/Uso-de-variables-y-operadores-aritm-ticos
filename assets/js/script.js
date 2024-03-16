@@ -27,14 +27,16 @@ document.write("La temperatura ingresada en grados Fahrenheites "+ gradosFahrenh
 
 
 // Actividad 4-------------------------------------
-let dias = prompt("Ingrese una cantidad de días");
-let diasEnAnios = Math.floor(dias / 365); 
-let semanas = Math.floor(dias / 7); 
+let cantidadDias = parseInt(prompt("Ingrese la cantidad de días:"));
 
-document.write("La cantidad de días ingresados en años es " + diasEnAnios + "<br>");
-document.write("La cantidad de días ingresados en semanas es " + semanas + "<br>");
+let años = Math.floor(cantidadDias / 365);
+let semanas = Math.floor((cantidadDias % 365) / 7);
+let dias = cantidadDias % 7;
+document.write( años +"año, " +"" + semanas + "semanas  y " + dias+ " días.");
+
 
 // Actividad 5-------------------------------------------
+
 let numero1 = parseInt(prompt("Ingrese un primer numero"));
 let numero2 = parseInt(prompt("Ingrese un segundo numero"));
 let numero3 = parseInt(prompt("Ingrese un tercer numero"));
